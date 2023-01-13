@@ -3,7 +3,7 @@
 
 This script is a method to implement a full dependency graph using a recursion logic. The task was to create a graph for the dependency inputs which as taken as input.
 
-##### *Dependencies:*
+#### *Dependencies:*
 
   - System Windows
   - Language Python 3.6.10 or greater
@@ -17,17 +17,16 @@ This script is a method to implement a full dependency graph using a recursion l
 
 
 
-##### *time and space complexity:* 
+#### *time and space complexity:* 
 
-Currently the time complexity of the scripts comes from the nested for loop which could take at worst O(N * M) time complexity. where N is the keys in the json list and M is the length of the values in the dictionary. In this specific implementation a recursion logic is implement which cuts down sometime but using a dfs tree or a graph would be much more efficient and twould consume less time as it can directly traverse through the values it has already visited and does not require to calculate the graph again.
+The nested for loop, which currently contributes to the time complexity of the scripts, has a worst-case time complexity of O(N * M). where N represents the keys in the json list and M is the size of the dictionary's values. Recursion logic is used in this particular solution, which saves time, however using a graph or dfs tree would be far more effective and take up less time because it can traverse directly across data it has already visited and does not need to recalculate the graph.
   
-The space complexity would work significantly better for the implementation of BFS tree rather than recursive approach with the similar idea of not haveing the overload of memory saving the same data and instead saving the nodes as a list.
+The implementation of a BFS tree would function much better in terms of space complexity than a recursive approach with the comparable goal of not overloading memory while saving the same data and instead saving the nodes as a list.
 
-##### *additional work to be done:*
+#### *additional work to be done:*
 
-Working on some more test cases which were found
-trying to implement it using dfs tree and eventually a graph approach.
+More test cases that were discovered need to be worked on as well as attempts to construct it using a dfs tree and ultimately a graph method.
 
-##### *basic working:* 
+#### *basic working:* 
 
-the basic gist of the program is that it iterates though the dependencies in a linear loop until we find a dependency which satifies a condidition of also being a parent dependecy to another child dependency. whenever this condition is fulfilled a recursive function is called upon and a seperate smaller dependency checks are made to run. this keeps running until we exhaust the list completly.
+The program iterates over the dependencies in a linear loop until we locate a dependency that satisfies the requirement of also being a parent dependency to another child dependency. This is how it works in its simplest form. A recursive function is used anytime this condition is met, and separate, smaller dependence checks are triggered. This keeps running until we exhaust the list completely.
